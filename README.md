@@ -22,7 +22,20 @@ Full project to installation of Tomcat on EC2 instance.
    Type following url by using Ec2 Public Ip in browser.
   http://<your-ec2-public-ip>:8080
   This URl should refelcted to Apache tomcat detailes page on this page it will shows tomcat installation succesfully done with installed tomcat version.
-11)
+11) To access manager page you should do following change in tomcat tomcat-users.xml and context.xml files.
+12)Edit file tomcat-users.xml file using following command.
+   #vim tomcat-users.xml
+   Change user id and pass in this file to access manager page.
+13)Edit tomcat Context.xml file and comment following code
+   <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+       allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+  Path to open context.xml file ->     /tomcat/webapps/host-manager/META-INF
+14)Restart tomcat once you done all changes.you may shutdonw and start tomcat using following command.
+#./shutdown.sh
+#./startup.sh
+
+   
+    
   
 
 
