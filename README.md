@@ -34,6 +34,9 @@ Full project to installation of Tomcat on EC2 instance.
 #./shutdown.sh
 #./startup.sh
 
+15)Access manager page from Tomcat main page. you have to click on "Manager App" Button you should redirect over the manager page.
+It will ask you for authotication , enter manager user id and password that you had entered into tomcat-users.xml
+
    
     
   
